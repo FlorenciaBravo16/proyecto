@@ -1,0 +1,75 @@
+/*sintaxis */
+
+/*selector{
+    propiedad:valor
+}*/
+
+/*un selector es una etiqueta, una clase o un id */
+
+@import url('https://fonts.googleapis.com/css2? family= Roboto+Flex:opsz,wght@8..144,200 & display=swap');
+
+@import url('https://fonts.googleapis.com/css2? family= Open+Sans:wght@300 & family= Roboto+Flex:opsz,wght@8..144,200 & display=swap') ;
+
+*{
+    padding: 0%;
+    margin: 0%
+}
+
+.border{
+    border: 1px solid black;
+}
+
+#grilla{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "main aside"
+    "main aside"
+    "footer footer";
+
+    grid-template-columns: 30% auto;
+    grid-template-rows: 100px 1fr 2fr 100px;
+    gap: 10px;
+
+    width: 100%;
+    height: 100vh;
+
+}
+
+header{
+    grid-area: header;
+    background-image: url("../img/productos.jpg");
+}
+
+main{
+    grid-area: main;
+    background-color: rgb(184, 115, 115);
+}
+
+aside{
+    grid-area: aside;
+    background-color: rgb(199, 161, 235);
+}
+
+footer{
+    grid-area: footer;
+    background-color: rgb(179, 241, 221);
+}
+
+#imagen{
+    width: 80%;
+    height: 50%;
+}
+
+nav ul li{
+    list-style-type:none;    
+    display: inline-block;
+    font-size: 60px;
+    text-decoration-line: none;
+    align-content: space-between;
+}
+
+#video{
+    width: 50%;
+    height: 50%;
+}
