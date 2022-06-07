@@ -53,12 +53,23 @@ aside{
 
 footer{
     grid-area: footer;
-    background-color: rgb(179, 241, 221);
+    background-image: linear-gradient(to left, blue, violet);
 }
 
 #imagen{
     width: 80%;
     height: 50%;
+}
+
+img:hover{
+    animation: dada 4s;
+}
+
+@keyframes dada{
+    0%{ scale: (100px);}
+    25%{ border-radius: 25%;}
+    50%{ width: 200px;}
+    75%{ transform: translateY(100px);}
 }
 
 nav ul li{
