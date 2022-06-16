@@ -25,14 +25,10 @@
 
 }
 
-header{
-    grid-area: header;
-    background-image: url("../img/productosm.jpg");
-}
 
 main{
     grid-area: main;
-    background-color: rgb(184, 115, 115);
+    background-color: rgb(232, 219, 219);
 }
 
 aside{
@@ -72,10 +68,6 @@ nav ul li{
 #video{
     width: 50%;
     height: 50%;
-}
-
-.pastel{
-    background-color: rgb(228, 130, 192);
 }
 
 .padre{
