@@ -1,0 +1,88 @@
+body header {
+  grid-area: header;
+  background-color: azure;
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  grid-area: main;
+  background-color: rgb(232, 219, 219);
+}
+main h1 {
+  color: purple;
+  font-size: large;
+}
+
+aside {
+  grid-area: aside;
+  background-color: rgb(199, 161, 235);
+}
+
+footer {
+  grid-area: footer;
+  background-image: linear-gradient(to left, blue, violet);
+}
+
+#imagen {
+  width: 80%;
+  height: 50%;
+}
+#imagen:hover {
+  -webkit-animation: dada 4s;
+          animation: dada 4s;
+}
+
+@-webkit-keyframes dada {
+  0% {
+    scale: 100px;
+  }
+  25% {
+    border-radius: 25%;
+  }
+  50% {
+    width: 200px;
+  }
+  75% {
+    transform: translateY(100px);
+  }
+}
+
+@keyframes dada {
+  0% {
+    scale: 100px;
+  }
+  25% {
+    border-radius: 25%;
+  }
+  50% {
+    width: 200px;
+  }
+  75% {
+    transform: translateY(100px);
+  }
+}
+#video {
+  width: 50%;
+  height: 50%;
+}
+
+.anidar ul {
+  list-style: none;
+}
+.anidar ul li h1 {
+  color: green;
+  font-size: large;
+}
+.anidar ul li h2 {
+  color: blue;
+  font-size: medium;
+}
+.anidar ul li h3 {
+  color: purple;
+  font-size: medium;
+}
+.anidar ul li h4 {
+  color: red;
+  font-size: medium;
+}/*# sourceMappingURL=home.css.map */
