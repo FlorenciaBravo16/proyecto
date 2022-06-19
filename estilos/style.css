@@ -157,4 +157,21 @@ img {
   width: 300px;
   height: 250px;
   margin-top: 10px;
+}
+
+.anidar ul li h1 {
+  color: coral;
+  font-size: large;
+}
+.anidar ul li h2 {
+  color: green;
+  font-size: medium;
+}
+.anidar ul li h3 {
+  color: blue;
+  font-size: medium;
+}
+.anidar ul li h4 {
+  color: black;
+  font-size: small;
 }/*# sourceMappingURL=style.css.map */
