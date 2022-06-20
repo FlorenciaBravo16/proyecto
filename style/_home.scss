@@ -1,0 +1,60 @@
+.border{
+    border: 1px solid black;
+}
+
+#grilla{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "aside"
+    "footer";
+
+    grid-template-columns: auto;
+    gap: 10px;
+    width: 100%;
+    height: 100vh;
+
+}
+
+header{
+    grid-area: header;
+    background-color: lightcoral;
+    width: 100%;
+    height: 300px;
+}
+
+main{
+    grid-area: main;
+    background-color: rgb(184, 115, 115);
+}
+
+aside{
+    grid-area: aside;
+    background-color: rgb(199, 161, 235);
+}
+
+footer{
+    grid-area: footer;
+    background-image: linear-gradient(to left, blue, violet);
+}
+
+#imagen{
+    width: 80%;
+    height: 50%;
+        &:hover{
+    animation: dada 4s;
+}
+}
+
+@keyframes dada{
+    0%{ scale: (100px);}
+    25%{ border-radius: 25%;}
+    50%{ width: 200px;}
+    75%{ transform: translateY(100px);}
+}
+
+#video{
+    width: 50%;
+    height: 50%;
+}
