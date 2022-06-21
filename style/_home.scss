@@ -1,42 +1,68 @@
 
-body{
-   
-    background-color: lightpink;
-}
-
 #grilla{
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-columns: auto auto;
     grid-template-areas: 
-    "header"
-    "main"
-    "aside"
-    "footer";
+    "header header"
+    "main aside"
+    "footer footer";
+
+}
+
+.gradiente{
+    background-image: linear-gradient(to right, white, pink);
 }
 
 header{
-    background-color: lightblue;
     grid-area: header;
 }
 
 main{
-    background-color: lightgreen;
     grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 15px;
+        h1{
+        color: $color;
+        font-family: $font;
+        font-size: 60px;
+         }
 }
 
 aside{
-    background-color: rgb(107, 10, 24);
     grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 15px;
+        h2{
+            color: $color;
+            font-size: 60px;
+            font-weight: bold;
+            font-family:$font;
+         }
+        p{
+            color: rgb(188, 3, 188);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
 }
 
 footer{
-    background-color: rgb(220, 220, 11);
-    margin-bottom: 0%;
+    grid-area: footer;
 }
 
-#imagen{
-    width: 50%;
+#video{
+    width: 400px;
+    height: 300px;
+}
+
+#imgDada{
+    width: 80%;
     height: 50%;
         &:hover{
     animation: dada 4s;
@@ -49,44 +75,3 @@ footer{
     50%{ width: 200px;}
     75%{ transform: translateY(100px);}
 }
-
-#video{
-    width: 50%;
-    height: 50%;
-}
-
-@media (min-width:500px){
-
-    #grilla{
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: 1fr 3fr 1fr;
-        grid-template-areas: 
-        "header header"
-        "main aside"
-        "footer footer";
-        margin: 5px;
-    }
-    
-    header{
-        background-color: lightblue;
-        grid-area: header;
-    }
-    
-    main{
-        background-color: lightgreen;
-        grid-area: main;
-    }
-    
-    aside{
-        background-color: lightpink;
-        grid-area: aside;
-    }
-    
-    footer{
-        background-color: rgb(242, 242, 147);
-    
-    }
-
-}
-
