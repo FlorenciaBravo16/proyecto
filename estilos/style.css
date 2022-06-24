@@ -134,6 +134,11 @@ img {
   height: 60%;
 }
 
+.caja {
+  background-color: rgb(180, 61, 81);
+  color: rgb(255, 233, 245);
+}
+
 .gradiente {
   background-image: linear-gradient(to right, white, pink);
 }/*# sourceMappingURL=style.css.map */

@@ -29,3 +29,13 @@ img{
     height: 60%;
 }
 
+@mixin cajaPersonalizada ($fondo: $color) {
+    background-color: $fondo;
+    color:rgb(255, 233, 245)
+}
+
+.caja{
+    @include cajaPersonalizada($letra:$font);
+}
+
+
