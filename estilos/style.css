@@ -1,3 +1,5 @@
+/*lista*/
+/*map*/
 * {
   padding: 0%;
   margin: 0%;
@@ -7,10 +9,60 @@
   width: 100%;
 }
 
+footer {
+  height: 100px;
+  color: rgb(236, 115, 135);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+footer button {
+  color: rgb(236, 115, 135);
+  height: 60px;
+  width: 60px;
+  border: none;
+  padding: 0;
+}
+footer button:hover {
+  color: rgb(244, 148, 164);
+}
+
+.text-h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.text-h2 {
+  font-size: 2.8rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.text-h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+.text-p {
+  font-size: 1rem;
+  font-weight: 200;
+}
+
 #grilla {
   display: grid;
   grid-template-columns: auto auto;
   grid-template-areas: "header header" "main aside" "footer footer";
+}
+@media (max-width: 480px) {
+  #grilla {
+    display: grid;
+    grid-template-areas: "header" "main" "aside" "footer";
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .gradiente {
@@ -28,12 +80,19 @@ main {
   justify-content: center;
   text-align: center;
   align-items: center;
+  padding: 20px;
   gap: 15px;
 }
 main h1 {
-  color: rgb(180, 61, 81);
+  color: rgb(236, 115, 135);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 60px;
+}
+@media (max-width: 480px) {
+  main {
+    padding: 0;
+    width: 100%;
+  }
 }
 
 aside {
@@ -46,14 +105,18 @@ aside {
   gap: 15px;
 }
 aside h2 {
-  color: rgb(180, 61, 81);
-  font-size: 60px;
-  font-weight: bold;
+  color: rgb(236, 115, 135);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 aside p {
   color: rgb(188, 3, 188);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+@media (max-width: 480px) {
+  aside {
+    padding: 0;
+    width: 100%;
+  }
 }
 
 footer {
@@ -118,6 +181,7 @@ body {
   text-align: center;
   margin: 10px;
   align-items: unset;
+  padding-top: 20px;
 }
 
 .padre {
@@ -132,11 +196,6 @@ body {
 img {
   width: 50%;
   height: 60%;
-}
-
-.caja {
-  background-color: rgb(180, 61, 81);
-  color: rgb(255, 233, 245);
 }
 
 .gradiente {

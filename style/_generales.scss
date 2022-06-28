@@ -7,3 +7,40 @@
 .foto-header{
     width: 100%;
 }
+
+footer{
+    height: 100px;
+    color: $primary-color;
+    @include center-content ();
+    gap: 20px;
+
+    button{
+        color: $primary-color;
+        height: 60px;
+        width: 60px;
+        border: none;
+        padding: 0;
+
+        &:hover{
+            color:$secundary-color
+        }
+    }
+}
+
+@each $name, $fs, $fw, $lh in $texts {
+    .text-#{$name} {
+        font-size: $fs;
+        font-weight: $fw;
+        line-height: $lh;
+    }
+}
+
+@mixin breakpoint ($size) {
+    @if map-has-key ($breakpoints, $size) {
+        @media (max-width: #{map-get($breakpoints, $size)}){
+            @content;
+        }
+        
+    }
+    
+}

@@ -7,6 +7,17 @@
     "main aside"
     "footer footer";
 
+    @include breakpoint (sm) {
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "main"
+        "aside"
+        "footer";
+        align-items: center;
+        text-align: center;
+    }
+
 }
 
 .gradiente{
@@ -24,12 +35,18 @@ main{
     justify-content: center;
     text-align: center;
     align-items: center;
+    padding: 20px;
     gap: 15px;
         h1{
-        color: $color;
+        color: $primary-color;
         font-family: $font;
         font-size: 60px;
          }
+
+    @include breakpoint (sm) {
+        padding: 0;
+        width: 100%;
+    }
 }
 
 aside{
@@ -41,14 +58,18 @@ aside{
     align-items: center;
     gap: 15px;
         h2{
-            color: $color;
-            font-size: 60px;
-            font-weight: bold;
+            color: $primary-color;
             font-family:$font;
          }
         p{
             color: rgb(188, 3, 188);
             font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        @include breakpoint (sm) {
+            padding: 0;
+            width: 100%;
+            
         }
 }
 

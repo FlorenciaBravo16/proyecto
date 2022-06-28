@@ -1,2 +1,27 @@
-$color: rgb(180, 61, 81);
+$color: rgb(246, 206, 220);
 $font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+$primary-color: rgb(236, 115, 135);
+$secundary-color: rgb(244, 148, 164);
+$white: white;
+
+/*lista*/
+$texts: 
+    "h1" 3rem 600 1.6,
+    "h2" 2.8rem 500 1.6,
+    "h3" 1.5rem bold 1.6,
+    "p"  1rem 200;
+
+    /*map*/
+$breakpoints: (
+    sm: 480px,
+    md: 768px,
+    lg: 1024px,
+);
+
+//mixin
+
+@mixin center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
