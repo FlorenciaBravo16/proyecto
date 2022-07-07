@@ -4,6 +4,10 @@
     margin: 0%
 }
 
+body{
+    background-image: linear-gradient(to right, white, pink);
+}
+
 .foto-header{
     width: 100%;
 }
@@ -12,18 +16,20 @@ footer{
     height: 100px;
     color: $primary-color;
     @include center-content ();
-    gap: 20px;
 
     button{
         color: $primary-color;
-        height: 60px;
-        width: 60px;
+        height: 100px;
+        width: 100px;
         border: none;
+        border-radius: 50%;
         padding: 0;
+        margin: 20px;
 
         &:hover{
             color:$secundary-color
         }
+
     }
 }
 
