@@ -1,0 +1,29 @@
+.historia{
+    display: flex;
+    flex-direction: column;
+    @include center-content();
+    margin: 50px;
+    gap: 50px;
+
+    img{
+        width: 300px;
+        height: 250px;
+    }
+    p{
+        font-size: 25px;
+        font-style: oblique;
+    }
+}
+
+@media (min-width: 480px) {
+    .historia{
+        display: flex;
+        flex-direction: row;
+        img{
+            width: 500px;
+            height: 400px;
+        }
+    }
+    
+}
+

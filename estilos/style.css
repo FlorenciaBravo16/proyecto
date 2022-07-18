@@ -1,20 +1,26 @@
 /*lista*/
 /*map*/
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 * {
   padding: 0%;
   margin: 0%;
 }
 
 body {
-  background-image: linear-gradient(to right, white, pink);
+  background-color: white;
+  font-family: roboto Condensed;
+  position: relative;
 }
 
 .foto-header {
   width: 100%;
+  height: 180px;
 }
 
 footer {
   height: 100px;
+  width: 100%;
+  bottom: 0;
   color: rgb(236, 115, 135);
   display: flex;
   justify-content: center;
@@ -22,9 +28,9 @@ footer {
 }
 footer button {
   color: rgb(236, 115, 135);
-  height: 100px;
-  width: 100px;
-  border: none;
+  height: 50px;
+  width: 50px;
+  border: dotted 2px rgb(212, 79, 126);
   border-radius: 50%;
   padding: 0;
   margin: 20px;
@@ -57,17 +63,13 @@ footer button:hover {
 }
 
 #grilla {
+  width: 100%;
+  height: 100vh;
   display: grid;
-  grid-template-columns: auto auto;
-  grid-template-areas: "header header" "main main" "aside recomendados" "footer footer";
-}
-@media (max-width: 480px) {
-  #grilla {
-    display: grid;
-    grid-template-areas: "header" "main" "aside" "footer";
-    align-items: center;
-    text-align: center;
-  }
+  grid-template-areas: "header" "main" "aside" "recomendados" "ACF" "footer";
+  grid-template-columns: 100%;
+  align-items: center;
+  text-align: center;
 }
 
 header {
@@ -79,68 +81,259 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  padding: 20px;
-  gap: 15px;
 }
-main h1 {
+main .intro {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  order: 2;
+  align-content: flex-start;
+  align-items: flex-start;
+  margin: 20px;
+  padding: 50px;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .intro h1 {
   color: rgb(236, 115, 135);
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-size: 60px;
+  font-size: 50px;
+  font-weight: bolder;
 }
-@media (max-width: 480px) {
-  main {
-    padding: 0;
-    width: 100%;
-  }
+main .intro p {
+  font-size: 20px;
+  line-height: 1.5;
+}
+main .intro .imgPortada {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  gap: 30px;
+  align-content: space-between;
+}
+main .intro .imgPortada .imgDada {
+  width: 300px;
+  height: 200px;
+}
+main .vegui {
+  width: 1fr;
+  display: flex;
+  flex-direction: row;
+  order: 1;
+  align-content: center;
+  margin: 30px;
+}
+main .vegui img {
+  display: none;
 }
 
 aside {
   grid-area: aside;
   display: flex;
   flex-direction: column;
+  display: flex;
   justify-content: center;
-  text-align: center;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
+  padding: 50px;
 }
 aside h2 {
   color: rgb(236, 115, 135);
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 50px;
 }
 aside p {
-  color: rgb(188, 3, 188);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+  line-height: 1.5;
+  font-size: 20px;
 }
-@media (max-width: 480px) {
-  aside {
-    padding: 0;
-    width: 100%;
+aside .video {
+  width: 300px;
+  height: 250px;
+}
+
+.conteiner {
+  grid-area: recomendados;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.conteiner h2 {
+  color: rgb(236, 115, 135);
+  font-size: 2fr;
+}
+
+.ACF {
+  grid-area: ACF;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.ACF img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: solid 2px rgb(236, 115, 135);
+  margin: 20px;
+}
+.ACF img:hover {
+  -webkit-animation: vibrate 0.5s;
+          animation: vibrate 0.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes vibrate {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-1deg);
+  }
+  20% {
+    transform: rotate(1deg);
+  }
+  30% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(1deg);
+  }
+  50% {
+    transform: rotate(-1deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  70% {
+    transform: rotate(-1deg);
+  }
+  80% {
+    transform: rotate(1deg);
+  }
+  90% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-1deg);
   }
 }
 
+@keyframes vibrate {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-1deg);
+  }
+  20% {
+    transform: rotate(1deg);
+  }
+  30% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(1deg);
+  }
+  50% {
+    transform: rotate(-1deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  70% {
+    transform: rotate(-1deg);
+  }
+  80% {
+    transform: rotate(1deg);
+  }
+  90% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-1deg);
+  }
+}
 footer {
   grid-area: footer;
 }
 
-.imgDada {
-  width: 400px;
-  height: 300px;
+@media (min-width: 480px) {
+  main {
+    grid-area: main;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main .vegui img {
+    display: block;
+    width: 100px;
+    height: 100px;
+  }
+  .conteiner {
+    justify-content: center;
+  }
+  .conteiner h2 {
+    font-size: 50px;
+  }
+  .ACF {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 1024px) {
+  #grilla {
+    display: grid;
+    grid-template-areas: "header header" "main main" "aside recomendados" "ACF ACF" "footer footer";
+    grid-template-columns: auto auto;
+  }
+  main .intro .imgPortada {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .conteiner {
+    padding: 30px;
+  }
+  .conteiner .row {
+    width: 80%;
+  }
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
 }
 
 .caja {
   height: 300px;
   width: 250px;
-  background-color: white;
   line-height: 200px;
-  border: 2px solid rgb(215, 73, 94);
-  border-radius: 25%;
-  color: palevioletred;
+  color: black;
+  border-radius: 20%;
+  background-color: white;
   text-align: center;
   margin: 10px;
   align-items: unset;
   padding-top: 20px;
+}
+.caja img {
+  border-radius: 50%;
 }
 
 .padre {
@@ -150,9 +343,95 @@ footer {
   padding: 10px;
   justify-content: space-around;
   align-content: space-around;
+  gap: 20px;
 }
 
 img {
   width: 50%;
   height: 60%;
+}
+
+.historia {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+  gap: 50px;
+}
+.historia img {
+  width: 300px;
+  height: 250px;
+}
+.historia p {
+  font-size: 25px;
+  font-style: oblique;
+}
+
+@media (min-width: 480px) {
+  .historia {
+    display: flex;
+    flex-direction: row;
+  }
+  .historia img {
+    width: 500px;
+    height: 400px;
+  }
+}
+.padreProd {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.caja1, .caja2, .caja3, .caja4 {
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid rgb(212, 211, 211);
+}
+.caja1 img, .caja2 img, .caja3 img, .caja4 img {
+  width: 300px;
+  height: 300px;
+}
+
+.formulario {
+  width: 80%;
+  border: 1px solid rgb(214, 214, 214);
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(250, 162, 176);
+  color: white;
+  padding: 30px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 4px;
+  align-items: center;
+  box-shadow: 7px 13px 37px #000;
+}
+.formulario h2 {
+  font-size: 30px;
+  color: white;
+}
+.formulario .controls {
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(250, 162, 176);
+  border: 1px solid white;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+.formulario .boton {
+  width: 100%;
+  padding: 12px;
+  margin: 12px;
+  font-size: 15px;
 }/*# sourceMappingURL=style.css.map */

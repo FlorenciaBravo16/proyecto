@@ -1,26 +1,18 @@
-
 #grilla{
+    width: 100%;
+    height: 100vh;
     display: grid;
-    grid-template-columns: auto auto;
     grid-template-areas: 
-    "header header"
-    "main main"
-    "aside recomendados"
-    "footer footer";
-
-    @include breakpoint (sm) {
-        display: grid;
-        grid-template-areas: 
         "header"
         "main"
         "aside"
+        "recomendados"
+        "ACF"
         "footer";
-        align-items: center;
-        text-align: center;
-    }
-
+    grid-template-columns: 100%;
+    align-items: center;
+    text-align: center;
 }
-
 header{
     grid-area: header;
 }
@@ -30,51 +22,187 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
-    align-items: center;
-    padding: 20px;
-    gap: 15px;
-        h1{
-        color: $primary-color;
-        font-family: $font;
-        font-size: 60px;
-         }
+    @include center-content();
 
-    @include breakpoint (sm) {
-        padding: 0;
+    .intro{
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        order:2;
+        align-content: flex-start;
+        align-items: flex-start;
+        margin: 20px;
+        padding: 50px;
+        gap: 20px;
+        @include center-content();
+            
+        h1{
+            color: $primary-color;
+            font-size: 50px;
+            font-weight: bolder;
+        }
+          
+        p{
+            font-size: 20px;
+            line-height: 1.5;
+            }
+        .imgPortada{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            flex-wrap: nowrap;
+            gap: 30px;
+            align-content: space-between;
+        .imgDada{
+            width: 300px;
+            height: 200px;
+            }
+        }
+    }
+
+    .vegui{
+        width: 1fr;
+        display: flex;
+        flex-direction: row;
+        order: 1;
+        align-content: center;
+        margin: 30px;
+        img{ display: none;
+        }
     }
 }
-
 aside{
     grid-area: aside;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    gap: 15px;
+    @include center-content();
+    gap: 20px;
+    padding: 50px;
         h2{
             color: $primary-color;
-            font-family:$font;
+            font-size: 50px;
          }
         p{
-            color: rgb(188, 3, 188);
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color:black;
+            line-height: 1.5;
+            font-size: 20px;
         }
 
-        @include breakpoint (sm) {
-            padding: 0;
-            width: 100%;
-            
+        .video{
+            width: 300px;
+            height: 250px;
         }
+}
+.conteiner{
+    grid-area: recomendados;
+    @include center-content();
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    h2{
+        color: $primary-color;
+        font-size: 2fr;
+     }
+}
+.ACF{
+    grid-area: ACF;
+    display: flex;
+    flex-direction: column;
+    @include center-content ();
+    gap: 15px;
+
+    img{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: solid 2px $primary-color;
+        margin: 20px;
+
+        &:hover{
+            animation: vibrate 0.5s;
+            animation-iteration-count: infinite;
+        }
+    }
+}
+@keyframes vibrate {
+    0%{ transform: rotate(0deg);}
+    10%{ transform: rotate(-1deg);}
+    20%{ transform: rotate(1deg);}
+    30%{ transform: rotate(0deg);}
+    40%{ transform: rotate(1deg);}
+    50%{ transform: rotate(-1deg);}
+    60%{ transform: rotate(0deg);}
+    70%{ transform: rotate(-1deg);}
+    80%{ transform: rotate(1deg);}
+    90%{ transform: rotate(0deg);}
+    100%{ transform: rotate(-1deg);}
 }
 
 footer{
     grid-area: footer;
 }
 
-.imgDada{
-    width: 400px;
-    height: 300px;
+@media (min-width:480px) {
+   
+    main{
+        grid-area: main;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        @include center-content();
+        .vegui{
+            img{
+                display: block;
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+
+    .conteiner{
+        justify-content: center;
+        h2{
+            font-size: 50px;
+        }
+    }
+
+    .ACF{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+
+}
+
+@media(min-width: 1024px) {
+    
+    #grilla{
+            display: grid;
+            grid-template-areas: 
+                "header header"
+                "main main"
+                "aside recomendados"
+                "ACF ACF"
+                "footer footer";
+            grid-template-columns: auto auto;
+        }
+
+    main{
+        .intro{
+            .imgPortada{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+            }
+        }
+    }
+
+    .conteiner{
+        padding: 30px;
+        .row{
+            width: 80%;
+        }
+    }
+
 }

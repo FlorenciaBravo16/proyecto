@@ -1,16 +1,22 @@
-
+  
+  h1{ 
+    @include center-content();
+    margin: 20px;
+  }
 .caja{
     height: 300px;
     width: 250px;
-    background-color: white;
     line-height: 200px;
-    border: 2px solid rgb(215, 73, 94);
-    border-radius: 25%;
-    color: palevioletred;
+    color: black;
+    border-radius: 20%;
+    background-color:white;
     text-align: center;
     margin: 10px;
     align-items: unset;
     padding-top: 20px;
+        img{
+            border-radius: 50%;
+        }
 }
 
 .padre{
@@ -20,6 +26,7 @@
     padding: 10px;
     justify-content: space-around;
     align-content: space-around;
+    gap: 20px;
 }
 
 img{
