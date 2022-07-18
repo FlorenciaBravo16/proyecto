@@ -18,7 +18,7 @@ body {
 }
 
 footer {
-  height: 100px;
+  height: 1fr;
   width: 100%;
   bottom: 0;
   color: rgb(236, 115, 135);
@@ -26,14 +26,16 @@ footer {
   justify-content: center;
   align-items: center;
 }
+footer h3 {
+  padding-bottom: 10px;
+  align-self: center;
+}
 footer button {
   color: rgb(236, 115, 135);
   height: 50px;
   width: 50px;
-  border: dotted 2px rgb(212, 79, 126);
   border-radius: 50%;
   padding: 0;
-  margin: 20px;
 }
 footer button:hover {
   color: rgb(244, 148, 164);
@@ -102,6 +104,7 @@ main .intro {
   align-content: flex-start;
   align-items: flex-start;
   margin: 20px;
+  padding-top: 0%;
   padding: 50px;
   gap: 20px;
   display: flex;

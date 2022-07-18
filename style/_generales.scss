@@ -17,26 +17,29 @@ body{
 }
 
 footer{
-    height: 100px;
+    height: 1fr;
     width: 100%;
     bottom: 0;
     color: $primary-color;
     @include center-content ();
-
+    h3{
+        padding-bottom: 10px;
+        align-self: center;
+    }
     button{
         color: $primary-color;
         height: 50px;
         width: 50px;
-        border: dotted 2px rgb(212, 79, 126);
         border-radius: 50%;
         padding: 0;
-        margin: 20px;
 
         &:hover{
             color:$secundary-color
         }
 
     }
+    
+    
 }
 
 @each $name, $fs, $fw, $lh in $texts {
