@@ -1,4 +1,10 @@
-
+h1{
+    margin: 50px;
+    font-size: 50px;
+    color: $primary-color;
+    align-content: center;
+    justify-content: center;
+}
 .padreProd{
     display: flex;
     flex-direction: row;
@@ -11,11 +17,13 @@
 
 .caja1, .caja2, .caja3, .caja4{
  margin: 20px;
- padding: 10px;
+ padding: 20px;
  border: 2px solid rgb(212, 211, 211);
+ gap: 30px;
  img{
     width: 300px;
     height: 300px;
+    margin: 5px;
  }
  
     

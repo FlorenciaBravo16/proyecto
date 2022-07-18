@@ -170,7 +170,7 @@ aside .video {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
@@ -396,6 +396,14 @@ img {
     height: 400px;
   }
 }
+h1 {
+  margin: 50px;
+  font-size: 50px;
+  color: rgb(236, 115, 135);
+  align-content: center;
+  justify-content: center;
+}
+
 .padreProd {
   display: flex;
   flex-direction: row;
@@ -410,12 +418,14 @@ img {
 
 .caja1, .caja2, .caja3, .caja4 {
   margin: 20px;
-  padding: 10px;
+  padding: 20px;
   border: 2px solid rgb(212, 211, 211);
+  gap: 30px;
 }
 .caja1 img, .caja2 img, .caja3 img, .caja4 img {
   width: 300px;
   height: 300px;
+  margin: 5px;
 }
 
 .formulario {
